@@ -131,10 +131,9 @@ namespace mtm {
 
         };
 
-        class IllegalInitialization : public std::exception {
+    class IllegalInitialization : public std::exception {
         public:
             IllegalInitialization() = default;
-
             std::string what() {
                 std::string str = "Mtm matrix error: Illegal initialization values";
                 return str;
@@ -165,8 +164,7 @@ namespace mtm {
             }
 
         };
-
-        friend std::ostream &operator<<(std::ostream &os, const Matrix &matrix1) {
+        friend std::ostream &operator<<(std::ostream &os, const Matrix &matrix1){
             const_iterator begin = matrix1.begin();
             const_iterator end = matrix1.end();
             return printMatrix(os, begin, end, matrix1.width());
@@ -412,8 +410,7 @@ namespace mtm {
     Matrix<T> Matrix<T>::operator-(const Matrix matrix1) const {
         if (this->dimensions != matrix1.dimensions) {
             throw Matrix<T>::DimensionMismatch(this->dimensions, matrix1.dimensions);
-        }
-        Matrix<T> temp = -matrix1;
+        }        Matrix<T> temp = -matrix1;
         Matrix result = *this + temp;
         return result;
     }
@@ -684,7 +681,7 @@ namespace mtm {
         int col = dimensions.getCol();
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
-                result(i, j) = func(result(i, j));
+                result(i ,j) = func(result(i ,j));
             }
         }
         return result;

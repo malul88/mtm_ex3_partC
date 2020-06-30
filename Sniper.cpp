@@ -51,3 +51,11 @@ void Sniper::attack(const GridPoint &src_coordinates, const GridPoint &dst_coord
 void Sniper::reload() {
     ammo += RELOAD_AMMO;
 }
+
+char Sniper::getCharacter() {
+    if (team == CPP) {
+        return 'N';
+    } else {
+        return 'n';
+    }
+}

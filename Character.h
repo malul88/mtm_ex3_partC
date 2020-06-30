@@ -14,7 +14,8 @@ namespace mtm {
         int health, ammo, range, power;
         Team team;
     public:
-        Character(int health, int ammo, int range, int power, Team team) : health(health), ammo(ammo), range(range), power(power),Team(team) {}
+        Character(int health, int ammo, int range, int power, Team team) :
+                  health(health), ammo(ammo), range(range), power(power),Team(team) {}
         virtual ~Character() = default;
         virtual void move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates,Matrix<Character*>& game_board) = 0;
         virtual void attack(const GridPoint& src_coordinates, const GridPoint& dst_coordinates, Matrix<Character*>& game_board) = 0;
@@ -31,9 +32,8 @@ namespace mtm {
         }
         int roundUp(int x, int y){
             return (int) ceill(static_cast<double>(static_cast<double >(x) / y));
-
-
         }
+        virtual char getCharacter() = 0; // todo chack for alloc
 
     };
 }

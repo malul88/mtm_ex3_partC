@@ -16,6 +16,7 @@ namespace mtm {
         void attack(const GridPoint& src_coordinates, const GridPoint& dst_coordinates, Matrix<Character*>& game_board);
         void reload();
         Character* clone() const override;
+        char getCharacter() override;
     };
 }
 

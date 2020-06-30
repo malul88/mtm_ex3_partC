@@ -60,3 +60,12 @@ void Soldier::attack(const GridPoint &src_coordinates, const GridPoint &dst_coor
 void Soldier::reload() {
     ammo += RELOAD_AMMO;
 }
+
+char Soldier::getCharacter() {
+    if (team == CPP) {
+        return 'S';
+    } else {
+        return 's';
+    }
+
+}

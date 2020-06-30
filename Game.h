@@ -38,7 +38,7 @@ namespace mtm {
         };
         typedef int units_t;
 
-        std::shared_ptr<Character> makeCharacter(CharacterType type, Team team, units_t health, units_t ammo, units_t range, units_t power){
+        static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team, units_t health, units_t ammo, units_t range, units_t power){
             if (health <=0 || ammo < 0 || range <= 0|| power < 0){
                 throw IllegalArgument();
             }
@@ -53,6 +53,9 @@ namespace mtm {
                 std::shared_ptr<Character> result(new Medic(health, ammo ,range, power, team));
                 return result;
             }
+        }
+        static bool isUpper(char c) {
+            return c >= 'A' && c <= 'Z';
         }
 
         class Exception : public std::exception {
@@ -79,6 +82,7 @@ namespace mtm {
         };class IllegalTarget : public GameException{
 
         };
+
 
     };
 
