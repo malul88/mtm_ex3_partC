@@ -1,0 +1,86 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Auxiliaries.h
+iostream
+-
+string
+-
+cmath
+-
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.cpp
+Character.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+iostream
+-
+vector
+-
+memory
+-
+Auxiliaries.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Auxiliaries.h
+Matrix.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Matrix.h
+Game.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Game.h
+Soldier.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Soldier.h
+Sniper.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.h
+Medic.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Medic.h
+cmath
+-
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.h
+Game.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Game.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Game.h
+Character.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+Matrix.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Matrix.h
+Sniper.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.h
+Soldier.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Soldier.h
+Medic.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Medic.h
+Exceptions.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Matrix.h
+string
+-
+iostream
+-
+Auxiliaries.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Auxiliaries.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Medic.h
+Character.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.cpp
+Sniper.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.h
+Exceptions.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.h
+Character.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Soldier.h
+Character.h
+C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h
+

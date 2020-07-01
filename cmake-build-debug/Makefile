@@ -149,6 +149,33 @@ Character.cpp.s:
 	$(MAKE) -f CMakeFiles\mtm_ex3_partC.dir\build.make CMakeFiles/mtm_ex3_partC.dir/Character.cpp.s
 .PHONY : Character.cpp.s
 
+Exceptions.obj: Exceptions.cpp.obj
+
+.PHONY : Exceptions.obj
+
+# target to build an object file
+Exceptions.cpp.obj:
+	$(MAKE) -f CMakeFiles\mtm_ex3_partC.dir\build.make CMakeFiles/mtm_ex3_partC.dir/Exceptions.cpp.obj
+.PHONY : Exceptions.cpp.obj
+
+Exceptions.i: Exceptions.cpp.i
+
+.PHONY : Exceptions.i
+
+# target to preprocess a source file
+Exceptions.cpp.i:
+	$(MAKE) -f CMakeFiles\mtm_ex3_partC.dir\build.make CMakeFiles/mtm_ex3_partC.dir/Exceptions.cpp.i
+.PHONY : Exceptions.cpp.i
+
+Exceptions.s: Exceptions.cpp.s
+
+.PHONY : Exceptions.s
+
+# target to generate assembly for a file
+Exceptions.cpp.s:
+	$(MAKE) -f CMakeFiles\mtm_ex3_partC.dir\build.make CMakeFiles/mtm_ex3_partC.dir/Exceptions.cpp.s
+.PHONY : Exceptions.cpp.s
+
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -296,6 +323,9 @@ help:
 	@echo ... Character.obj
 	@echo ... Character.i
 	@echo ... Character.s
+	@echo ... Exceptions.obj
+	@echo ... Exceptions.i
+	@echo ... Exceptions.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s

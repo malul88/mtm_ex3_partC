@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Exceptions.h"
 
 using namespace mtm;
 
@@ -107,8 +108,7 @@ std::ostream &mtm::operator<<(std::ostream &os, const Game &game) {
     return printGameBoard(os, begin, end, col);
 }
 
-
-bool Game::isOver(Team *winningTeam) const {
+bool Game::isOver(const mtm::Team *winningTeam) const {
     int row = game_board.height();
     int col = game_board.width();
 

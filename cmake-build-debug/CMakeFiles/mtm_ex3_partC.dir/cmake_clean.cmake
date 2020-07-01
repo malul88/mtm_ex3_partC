@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mtm_ex3_partC.dir/Character.cpp.obj"
+  "CMakeFiles/mtm_ex3_partC.dir/Exceptions.cpp.obj"
   "CMakeFiles/mtm_ex3_partC.dir/Game.cpp.obj"
   "CMakeFiles/mtm_ex3_partC.dir/Medic.cpp.obj"
   "CMakeFiles/mtm_ex3_partC.dir/Sniper.cpp.obj"

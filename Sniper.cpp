@@ -1,4 +1,5 @@
 #include "Sniper.h"
+#include "Exceptions.h"
 
 using namespace mtm;
 
@@ -8,7 +9,7 @@ Sniper::Sniper(int health, int ammo, int range, int power, Team team, int counte
 
 void Sniper::move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character *> &game_board) {
     if (GridPoint::distance(src_coordinates, dst_coordinates) > MOVEMENT_RANGE) {
-        throw Game::MoveTooFar();
+        throw MoveTooFar();
     }
     game_board(dst_coordinates.row, dst_coordinates.col) = game_board(src_coordinates.row, src_coordinates.col);
     game_board(src_coordinates.row, src_coordinates.col) = nullptr;
@@ -21,13 +22,13 @@ Character *Sniper::clone() const {
 void Sniper::attack(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character *> &game_board) {
     int distance = GridPoint::distance(src_coordinates, dst_coordinates);
     if (distance > range || distance < roundUp(range, 2)) {
-        throw Game::OutOfRange();
+        throw OutOfRange();
     }
     if (ammo <= 0) {
-        throw Game::OutOfAmmo();
+        throw OutOfAmmo();
     }
     if (game_board(dst_coordinates.row, dst_coordinates.col) == nullptr) {
-        throw Game::IllegalTarget();
+        throw IllegalTarget();
     }
     if ((attack_counter % 3) == 0 && attack_counter != 0) {
         game_board(dst_coordinates.row, dst_coordinates.col)->hit(power * 2);

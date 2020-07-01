@@ -8,7 +8,7 @@ Medic::Medic(int health, int ammo, int range, int power, Team team) :
 
 void Medic::move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character *> &game_board) {
     if (GridPoint::distance(src_coordinates, dst_coordinates) > MOVEMENT_RANGE) {
-        throw Game::MoveTooFar();
+        throw MoveTooFar();
     }
     game_board(dst_coordinates.row, dst_coordinates.col) = game_board(src_coordinates.row, src_coordinates.col);
     game_board(src_coordinates.row, src_coordinates.col) = nullptr;
@@ -21,17 +21,17 @@ Character *Medic::clone() const {
 void Medic::attack(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character*> &game_board) {
     int distance = GridPoint::distance(src_coordinates, dst_coordinates);
     if (distance > range) {
-        throw Game::OutOfRange();
+        throw OutOfRange();
     }
     if (game_board(dst_coordinates.row, dst_coordinates.col) == nullptr || src_coordinates == dst_coordinates) {
-        throw Game::IllegalTarget();
+        throw IllegalTarget();
     }
     if (game_board(dst_coordinates.row, dst_coordinates.col)->getTeam() ==
         game_board(src_coordinates.row, src_coordinates.col)->getTeam()){
         game_board(dst_coordinates.row, dst_coordinates.col)->hit(-power);
     } else {
         if (ammo <= 0) {
-            throw Game::OutOfAmmo();
+            throw OutOfAmmo();
         }
         game_board(dst_coordinates.row, dst_coordinates.col)->hit(power);
         if (game_board(dst_coordinates.row, dst_coordinates.col)->getHealth() <= 0) {

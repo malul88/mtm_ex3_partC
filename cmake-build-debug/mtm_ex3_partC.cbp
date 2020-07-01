@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.h">
 			<Option target="mtm_ex3_partC"/>
 		</Unit>
+		<Unit filename="C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.cpp">
+			<Option target="mtm_ex3_partC"/>
+		</Unit>
+		<Unit filename="C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.h">
+			<Option target="mtm_ex3_partC"/>
+		</Unit>
 		<Unit filename="C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Game.cpp">
 			<Option target="mtm_ex3_partC"/>
 		</Unit>

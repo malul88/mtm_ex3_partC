@@ -5,6 +5,7 @@
 #include "Sniper.h"
 #include "Soldier.h"
 #include "Medic.h"
+#include "Exceptions.h"
 namespace mtm {
     class Game {
     private:
@@ -28,7 +29,7 @@ namespace mtm {
 
         friend std::ostream &operator<<(std::ostream &os, const Game &game);
 
-        bool isOver(Team *winningTeam = NULL) const;
+        bool isOver(const Team *winningTeam = NULL) const;
 
         enum Team {
             CPP, PYTHON
@@ -57,31 +58,6 @@ namespace mtm {
         static bool isUpper(char c) {
             return c >= 'A' && c <= 'Z';
         }
-
-        class Exception : public std::exception {
-
-        };
-
-        class GameException : public Exception{
-
-        };
-        class IllegalArgument : public GameException{
-
-        };class IllegalCell : public GameException{
-
-        };class CellEmpty : public GameException{
-
-        };class MoveTooFar : public GameException{
-
-        };class CellOccupied : public GameException{
-
-        };class OutOfRange : public GameException{
-
-        };class OutOfAmmo : public GameException{
-
-        };class IllegalTarget : public GameException{
-
-        };
 
 
     };

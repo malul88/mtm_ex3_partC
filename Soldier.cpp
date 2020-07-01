@@ -8,7 +8,7 @@ Soldier::Soldier(int health, int ammo, int range, int power, Team team) : Charac
 
 void Soldier::move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character *> &game_board) {
     if (GridPoint::distance(src_coordinates, dst_coordinates) > MOVEMENT_RANGE) {
-        throw Game::MoveTooFar();
+        throw MoveTooFar();
     }
     game_board(dst_coordinates.row, dst_coordinates.col) = game_board(src_coordinates.row, src_coordinates.col);
     game_board(src_coordinates.row, src_coordinates.col) = nullptr;
@@ -20,13 +20,13 @@ Character *Soldier::clone() const {
 
 void Soldier::attack(const GridPoint &src_coordinates, const GridPoint &dst_coordinates, Matrix<Character *> &game_board) {
     if (GridPoint::distance(src_coordinates, dst_coordinates) > range) {
-        throw Game::OutOfRange();
+        throw OutOfRange();
     }
     if (ammo <= 0) {
-        throw Game::OutOfAmmo();
+        throw OutOfAmmo();
     }
     if (src_coordinates.row != dst_coordinates.row && src_coordinates.col != dst_coordinates.col) {
-        throw Game::IllegalTarget();
+        throw IllegalTarget();
     }
     int row = game_board.height();
     int col = game_board.width();

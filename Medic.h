@@ -9,9 +9,9 @@ namespace mtm {
         const int RELOAD_AMMO = 5;
         const int ATTACK_COST = 1;
 
-        void move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates,Matrix<Character*>& game_board);
-        void attack(const GridPoint& src_coordinates, const GridPoint& dst_coordinates, Matrix<Character*>& game_board);
-        void reload();
+        void move(const GridPoint &src_coordinates, const GridPoint &dst_coordinates,Matrix<Character*>& game_board) override;
+        void attack(const GridPoint& src_coordinates, const GridPoint& dst_coordinates, Matrix<Character*>& game_board) override;
+        void reload() override;
         Character* clone() const override;
         char getCharacter() override;
 

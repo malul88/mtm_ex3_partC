@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Character.cpp" "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/cmake-build-debug/CMakeFiles/mtm_ex3_partC.dir/Character.cpp.obj"
+  "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Exceptions.cpp" "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/cmake-build-debug/CMakeFiles/mtm_ex3_partC.dir/Exceptions.cpp.obj"
   "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Game.cpp" "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/cmake-build-debug/CMakeFiles/mtm_ex3_partC.dir/Game.cpp.obj"
   "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Medic.cpp" "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/cmake-build-debug/CMakeFiles/mtm_ex3_partC.dir/Medic.cpp.obj"
   "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/Sniper.cpp" "C:/Users/Michael Malul/CLionProjects/mtm_ex3_partC/cmake-build-debug/CMakeFiles/mtm_ex3_partC.dir/Sniper.cpp.obj"

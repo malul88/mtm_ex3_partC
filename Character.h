@@ -6,6 +6,9 @@
 #include "Auxiliaries.h"
 #include "Matrix.h"
 #include "Game.h"
+#include "Soldier.h"
+#include "Sniper.h"
+#include "Medic.h"
 #include <cmath>
 
 namespace mtm {
